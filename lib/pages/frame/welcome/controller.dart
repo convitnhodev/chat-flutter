@@ -1,0 +1,20 @@
+import 'package:chatty/pages/frame/welcome/state.dart';
+import 'package:get/get.dart';
+import 'package:chatty/common/routes/names.dart';
+
+
+
+class WelcomeController extends GetxController {
+  WelcomeController();
+  final title = "Chatty .";
+  final state = WelcomeState();
+
+  @override
+  void onReady() {
+    super.onReady();
+    print("test");
+    Future.delayed(
+      const Duration(seconds: 3), () => Get.offAllNamed(AppRoutes.Message));
+
+  }
+}
